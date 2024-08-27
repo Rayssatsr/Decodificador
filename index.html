@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificador</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="icon" href="./assets/images/lock.svg" type="image/x-icon">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="header-title"><span class="material-icons header-icon">lock</span> Decodificador de Texto</h1>
+        </header>
+        <main class="main-content">
+            <div class="card-container">
+                <div class="card" id="encoded-card">
+                    <p class="card-text" id="encoded-text" aria-live="polite">Texto codificado aparecerá aqui</p>
+                    <div class="card-actions">
+                        <button class="card-button" id="encrypt-btn"><span class="material-icons" aria-hidden="true">lock</span> Codificar</button>
+                        <button class="card-button" id="decrypt-btn"><span class="material-icons" aria-hidden="true">lock_open</span> Decodificar</button>
+                        <button class="copy-button" id="copy-btn" aria-label="Copiar texto"><span class="material-icons" aria-hidden="true">content_copy</span></button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer-container">
+            <textarea class="input-textarea" id="input-text" placeholder="Digite o texto aqui..." aria-label="Área de texto para entrada de dados"></textarea>
+            <button class="send-button" id="send-btn" aria-label="Enviar texto"><span class="material-icons" aria-hidden="true">send</span></button>
+        </footer>
+    </div>
+    <div id="copy-modal" class="modal hidden" role="alert">
+        <div class="modal-content">
+            <p>Texto copiado para a área de transferência!</p>
+        </div>
+    </div>
+    <script src="scripts/script.js" type="module"></script>
+</body>
+</html>
